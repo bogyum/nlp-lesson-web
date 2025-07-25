@@ -6,7 +6,7 @@ import { Copy, Check } from 'lucide-react';
 
 interface Lesson2Props {
   copiedPrompt: number | null;
-  copyPromptToClipboard: (prompt: string, id: number) => void;
+  copyPromptToClipboard: (promptId: number) => void;
 }
 
 export default function Lesson2({ copiedPrompt, copyPromptToClipboard }: Lesson2Props) {
@@ -90,7 +90,7 @@ conda activate [env_name]`}
                   </div>
                 </div>
                 <button
-                  onClick={() => copyPromptToClipboard(example.prompt, example.id)}
+                  onClick={() => copyPromptToClipboard(example.id)}
                   className="flex items-center space-x-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
                 >
                   {copiedPrompt === example.id ? (
@@ -103,26 +103,24 @@ conda activate [env_name]`}
                   </span>
                 </button>
               </div>
-
-              <div className="bg-gray-50 p-4 rounded-md">
+              
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h5 className="font-medium text-gray-900 mb-2">프롬프트:</h5>
+                <div className="bg-white p-3 rounded border font-mono text-sm">
+                  {example.prompt}
+                </div>
+              </div>
+              
+              <div className="mt-4">
                 <h5 className="font-medium text-gray-900 mb-2">학습 목표:</h5>
                 <ul className="space-y-1">
                   {example.learningObjectives.map((objective, index) => (
-                    <li key={index} className="text-sm text-gray-600 flex items-start">
-                      <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                    <li key={index} className="text-sm text-gray-700 flex items-start">
+                      <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
                       {objective}
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              <div className="mt-4">
-                <CodeBlock
-                  code={example.prompt}
-                  language="text"
-                  title="프롬프트"
-                  showCopyButton={false}
-                />
               </div>
             </div>
           ))}
