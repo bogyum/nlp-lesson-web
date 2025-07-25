@@ -104,9 +104,9 @@ conda activate [env_name]`}
                 </button>
               </div>
               
-              <div className="bg-gray-50 p-4 rounded-lg">
+              <div className="bg-gray-100 p-4 rounded-lg border">
                 <h5 className="font-medium text-gray-900 mb-2">프롬프트:</h5>
-                <div className="bg-white p-3 rounded border font-mono text-sm">
+                <div className="bg-gray-800 text-gray-100 p-4 rounded border font-mono text-sm leading-relaxed whitespace-pre-line">
                   {example.prompt}
                 </div>
               </div>
@@ -128,4 +128,4 @@ conda activate [env_name]`}
       </div>
     </div>
   );
-} 
+}
