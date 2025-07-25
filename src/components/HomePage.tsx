@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation';
 import { lessons } from '@/data/lessons';
 import LessonCard from '@/components/ui/LessonCard';
@@ -8,31 +8,13 @@ import { BookOpen, Clock, Target } from 'lucide-react';
 
 export default function HomePage() {
   const router = useRouter();
-  const [mounted, setMounted] = useState(false);
-  const [completedLessons, setCompletedLessons] = useState(0);
-  const [totalLessons, setTotalLessons] = useState(0);
-
-  useEffect(() => {
-    setMounted(true);
-    setCompletedLessons(lessons.filter(lesson => lesson.status === 'completed').length);
-    setTotalLessons(lessons.length);
-  }, []);
 
   const handleLessonClick = (lessonId: number) => {
     router.push(`/lesson/${lessonId}`);
   };
 
-  // 클라이언트 사이드에서만 렌더링
-  if (!mounted) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600">로딩 중...</p>
-        </div>
-      </div>
-    );
-  }
+  const completedLessons = lessons.filter(lesson => lesson.status === 'completed').length;
+  const totalLessons = lessons.length;
 
   return (
     <div className="min-h-screen bg-gray-50">

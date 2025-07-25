@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ChevronRight, Clock, CheckCircle, Circle, PlayCircle } from 'lucide-react';
 import { Lesson } from '@/data/lessons';
 
@@ -33,34 +33,6 @@ const getColorClasses = (color: string) => {
 };
 
 export default function LessonCard({ lesson, onClick }: LessonCardProps) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // 클라이언트 사이드에서만 렌더링
-  if (!mounted) {
-    return (
-      <div className="p-6 rounded-lg border-2 bg-gray-50 animate-pulse">
-        <div className="flex items-start justify-between mb-4">
-          <div className="flex items-center space-x-3">
-            <div className="w-5 h-5 bg-gray-300 rounded-full"></div>
-            <div className="space-y-2">
-              <div className="h-4 bg-gray-300 rounded w-48"></div>
-              <div className="h-3 bg-gray-200 rounded w-24"></div>
-            </div>
-          </div>
-          <div className="w-5 h-5 bg-gray-300 rounded"></div>
-        </div>
-        <div className="space-y-2">
-          <div className="h-3 bg-gray-200 rounded w-full"></div>
-          <div className="h-3 bg-gray-200 rounded w-3/4"></div>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div
       onClick={onClick}
