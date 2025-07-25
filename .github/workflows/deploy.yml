@@ -34,10 +34,12 @@ jobs:
       - name: Build with Next.js
         run: npm run build
       
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./out
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          force_orphan: true
 
   deploy:
     environment:
