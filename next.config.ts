@@ -6,8 +6,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: '/nlp-lesson-web',
-  assetPrefix: '/nlp-lesson-web/',
   eslint: {
     ignoreDuringBuilds: true,
   },
