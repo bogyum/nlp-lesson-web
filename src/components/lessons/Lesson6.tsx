@@ -290,6 +290,289 @@ export default function Lesson6() {
           </div>
         </div>
 
+        {/* 웹 서비스 아키텍처 이미지 섹션 */}
+        <div className="bg-white p-6 rounded-lg border mt-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">웹 서비스 아키텍처 시각화</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* 클라이언트-서버 아키텍처 */}
+            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-4 rounded-lg border border-indigo-200">
+              <h4 className="font-semibold text-indigo-900 mb-3 flex items-center">
+                <span className="text-2xl mr-2">🖥️</span>
+                클라이언트-서버 아키텍처
+              </h4>
+              <div className="bg-white p-4 rounded border mb-4">
+                <div className="flex justify-between items-center mb-3">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-blue-200 rounded-lg flex items-center justify-center mx-auto mb-2">
+                      <span className="text-blue-600 text-lg">💻</span>
+                    </div>
+                    <p className="text-xs text-gray-600">클라이언트</p>
+                  </div>
+                  <div className="flex-1 mx-4">
+                    <div className="h-0.5 bg-gray-300"></div>
+                    <div className="text-center text-xs text-gray-500 mt-1">HTTP 요청/응답</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-green-200 rounded-lg flex items-center justify-center mx-auto mb-2">
+                      <span className="text-green-600 text-lg">🖥️</span>
+                    </div>
+                    <p className="text-xs text-gray-600">서버</p>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-700">
+                  클라이언트(브라우저)가 서버에 요청을 보내고, 서버가 처리한 결과를 응답으로 받는 구조입니다.
+                </p>
+              </div>
+              
+              {/* 클라이언트-서버 아키텍처 이미지 */}
+              <div className="text-center">
+                <div className="bg-gray-100 p-4 rounded-lg border-2 border-dashed border-gray-300">
+                  <div className="text-gray-500 text-sm mb-2">클라이언트-서버 아키텍처 다이어그램</div>
+                  <div className="flex justify-center items-center space-x-8">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-blue-200 rounded-lg flex items-center justify-center mb-2">
+                        <span className="text-blue-600 text-xl">💻</span>
+                      </div>
+                      <p className="text-xs text-gray-600">클라이언트</p>
+                      <p className="text-xs text-gray-500">(브라우저)</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="w-8 h-0.5 bg-gray-400 mb-1"></div>
+                      <div className="text-xs text-gray-500">HTTP</div>
+                      <div className="w-8 h-0.5 bg-gray-400 mt-1"></div>
+                    </div>
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-green-200 rounded-lg flex items-center justify-center mb-2">
+                        <span className="text-green-600 text-xl">🖥️</span>
+                      </div>
+                      <p className="text-xs text-gray-600">서버</p>
+                      <p className="text-xs text-gray-500">(API)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* 3-Tier 아키텍처 */}
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-lg border border-purple-200">
+              <h4 className="font-semibold text-purple-900 mb-3 flex items-center">
+                <span className="text-2xl mr-2">🏗️</span>
+                3-Tier 아키텍처
+              </h4>
+              <div className="bg-white p-4 rounded border mb-4">
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <div className="w-8 h-8 bg-blue-200 rounded flex items-center justify-center mr-3">
+                      <span className="text-blue-600 text-xs">1</span>
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium text-gray-900">Presentation Tier</p>
+                      <p className="text-xs text-gray-600">사용자 인터페이스</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-8 h-8 bg-green-200 rounded flex items-center justify-center mr-3">
+                      <span className="text-green-600 text-xs">2</span>
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium text-gray-900">Application Tier</p>
+                      <p className="text-xs text-gray-600">비즈니스 로직</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-8 h-8 bg-purple-200 rounded flex items-center justify-center mr-3">
+                      <span className="text-purple-600 text-xs">3</span>
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium text-gray-900">Data Tier</p>
+                      <p className="text-xs text-gray-600">데이터 저장소</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-700 mt-3">
+                  프레젠테이션, 애플리케이션, 데이터 계층으로 분리된 구조입니다.
+                </p>
+              </div>
+              
+              {/* 3-Tier 아키텍처 이미지 */}
+              <div className="text-center">
+                <div className="bg-gray-100 p-4 rounded-lg border-2 border-dashed border-gray-300">
+                  <div className="text-gray-500 text-sm mb-3">3-Tier 아키텍처 다이어그램</div>
+                  <div className="space-y-2">
+                    <div className="flex justify-center">
+                      <div className="w-20 h-12 bg-blue-200 rounded-lg flex items-center justify-center">
+                        <span className="text-blue-600 text-sm font-medium">Frontend</span>
+                      </div>
+                    </div>
+                    <div className="flex justify-center">
+                      <div className="w-0.5 h-4 bg-gray-400"></div>
+                    </div>
+                    <div className="flex justify-center">
+                      <div className="w-20 h-12 bg-green-200 rounded-lg flex items-center justify-center">
+                        <span className="text-green-600 text-sm font-medium">Backend</span>
+                      </div>
+                    </div>
+                    <div className="flex justify-center">
+                      <div className="w-0.5 h-4 bg-gray-400"></div>
+                    </div>
+                    <div className="flex justify-center">
+                      <div className="w-20 h-12 bg-purple-200 rounded-lg flex items-center justify-center">
+                        <span className="text-purple-600 text-sm font-medium">Database</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 프론트엔드 vs 백엔드 비교 이미지 */}
+        <div className="bg-white p-6 rounded-lg border mt-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">프론트엔드 vs 백엔드 비교</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* 프론트엔드 상세 */}
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-lg border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-3 flex items-center">
+                <span className="text-2xl mr-2">🎨</span>
+                프론트엔드 (Frontend)
+              </h4>
+              
+              {/* 프론트엔드 이미지 */}
+              <div className="bg-white p-4 rounded border mb-4">
+                <div className="text-center">
+                  <div className="bg-gray-100 p-4 rounded-lg border-2 border-dashed border-gray-300 mb-3">
+                    <div className="text-gray-500 text-sm mb-2">웹 페이지 구조</div>
+                    <div className="space-y-2">
+                      <div className="bg-blue-100 p-2 rounded text-xs">
+                        <div className="font-medium text-blue-800">Header</div>
+                        <div className="text-blue-600">네비게이션, 로고</div>
+                      </div>
+                      <div className="bg-green-100 p-2 rounded text-xs">
+                        <div className="font-medium text-green-800">Main Content</div>
+                        <div className="text-green-600">페이지 내용, 폼</div>
+                      </div>
+                      <div className="bg-purple-100 p-2 rounded text-xs">
+                        <div className="font-medium text-purple-800">Footer</div>
+                        <div className="text-purple-600">연락처, 링크</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <ul className="text-xs text-blue-700 space-y-1">
+                <li>• HTML, CSS, JavaScript</li>
+                <li>• React, Vue, Angular</li>
+                <li>• 사용자 인터페이스</li>
+                <li>• 반응형 디자인</li>
+                <li>• 클라이언트 사이드 로직</li>
+              </ul>
+            </div>
+            
+            {/* 백엔드 상세 */}
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-lg border border-green-200">
+              <h4 className="font-semibold text-green-900 mb-3 flex items-center">
+                <span className="text-2xl mr-2">⚙️</span>
+                백엔드 (Backend)
+              </h4>
+              
+              {/* 백엔드 이미지 */}
+              <div className="bg-white p-4 rounded border mb-4">
+                <div className="text-center">
+                  <div className="bg-gray-100 p-4 rounded-lg border-2 border-dashed border-gray-300 mb-3">
+                    <div className="text-gray-500 text-sm mb-2">서버 구조</div>
+                    <div className="space-y-2">
+                      <div className="bg-yellow-100 p-2 rounded text-xs">
+                        <div className="font-medium text-yellow-800">API Layer</div>
+                        <div className="text-yellow-600">RESTful API</div>
+                      </div>
+                      <div className="bg-orange-100 p-2 rounded text-xs">
+                        <div className="font-medium text-orange-800">Business Logic</div>
+                        <div className="text-orange-600">비즈니스 규칙</div>
+                      </div>
+                      <div className="bg-red-100 p-2 rounded text-xs">
+                        <div className="font-medium text-red-800">Data Access</div>
+                        <div className="text-red-600">데이터베이스 연동</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <ul className="text-xs text-green-700 space-y-1">
+                <li>• Python, Java, Node.js</li>
+                <li>• Flask, Django, Express</li>
+                <li>• 서버 사이드 로직</li>
+                <li>• 데이터베이스 연동</li>
+                <li>• API 엔드포인트</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* API 통신 예시 */}
+        <div className="bg-white p-6 rounded-lg border mt-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">API 통신 예시</h3>
+          
+          <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg border-2 border-dashed border-yellow-300">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* GET 요청 예시 */}
+              <div className="bg-white p-4 rounded-lg border border-yellow-200">
+                <h4 className="font-semibold text-yellow-900 mb-3 flex items-center">
+                  <span className="text-lg mr-2">📥</span>
+                  GET 요청
+                </h4>
+                <div className="bg-gray-100 p-3 rounded text-xs font-mono">
+                  <div className="text-green-600">GET /api/products</div>
+                  <div className="text-gray-500 mt-1">상품 목록 조회</div>
+                </div>
+                <div className="mt-3 text-xs text-gray-600">
+                  <p>• 상품 목록 가져오기</p>
+                  <p>• 사용자 정보 조회</p>
+                  <p>• 게시물 목록 불러오기</p>
+                </div>
+              </div>
+              
+              {/* POST 요청 예시 */}
+              <div className="bg-white p-4 rounded-lg border border-orange-200">
+                <h4 className="font-semibold text-orange-900 mb-3 flex items-center">
+                  <span className="text-lg mr-2">📤</span>
+                  POST 요청
+                </h4>
+                <div className="bg-gray-100 p-3 rounded text-xs font-mono">
+                  <div className="text-blue-600">POST /api/orders</div>
+                  <div className="text-gray-500 mt-1">주문 생성</div>
+                </div>
+                <div className="mt-3 text-xs text-gray-600">
+                  <p>• 새 주문 생성</p>
+                  <p>• 사용자 등록</p>
+                  <p>• 게시물 작성</p>
+                </div>
+              </div>
+              
+              {/* PUT/DELETE 요청 예시 */}
+              <div className="bg-white p-4 rounded-lg border border-red-200">
+                <h4 className="font-semibold text-red-900 mb-3 flex items-center">
+                  <span className="text-lg mr-2">🔄</span>
+                  PUT/DELETE
+                </h4>
+                <div className="bg-gray-100 p-3 rounded text-xs font-mono">
+                  <div className="text-purple-600">PUT /api/products/123</div>
+                  <div className="text-red-600">DELETE /api/posts/456</div>
+                </div>
+                <div className="mt-3 text-xs text-gray-600">
+                  <p>• 상품 정보 수정</p>
+                  <p>• 게시물 삭제</p>
+                  <p>• 사용자 정보 업데이트</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <TipBox type="info" title="웹 서비스 개발의 중요성">
           <p className="text-sm">
             웹 서비스는 현대 소프트웨어 개발의 핵심입니다. 프론트엔드와 백엔드가 잘 연결되어야 사용자가 편리하게 이용할 수 있는 완성된 서비스가 됩니다. 
